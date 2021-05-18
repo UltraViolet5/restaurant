@@ -14,11 +14,13 @@ namespace restaurant.Model
             order = new Order(this.Id);
         }
 
-        public override Order GetOrder(int Peoples, int Staff)
-        {
-            GetRandom(Staff + 1, Peoples);
-            return order;
+        //public override Order GetOrder(int Peoples, int Staff)
+        //{
+        //    int GuestId = GetRandom(Staff + 1, Peoples+1);
 
-        }
+        //    return order;
+
+        //}
+        G
     }
 }

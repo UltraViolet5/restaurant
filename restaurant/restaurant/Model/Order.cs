@@ -10,7 +10,7 @@ namespace restaurant.Model
     {
         public Food food { get; set; }
         public int GuestId { get; set; }
-
+        public bool IsFinished = false;
         public Order(int id)
         {
             GuestId = id;

@@ -4,7 +4,10 @@ using System.Text;
 
 namespace restaurant.Enums
 {
-    class Food
+    enum Food
     {
+        milk,
+        egg,
+        meat,
     }
 }

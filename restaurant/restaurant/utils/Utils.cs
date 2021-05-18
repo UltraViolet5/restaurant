@@ -4,7 +4,13 @@ using System.Text;
 
 namespace restaurant.utils
 {
-    class Class1
+    static class Utils
     {
+        public static int GetRandom(int min, int max)
+        {
+            Random random = new Random();
+            var number =random.Next(min, max);
+            return number;
+        }
     }
 }

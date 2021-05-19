@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace restaurant.Model
 {
-    abstract class Man
+    public abstract class Man
     {
         protected int Id { get; set; }
         public string Name { get; }

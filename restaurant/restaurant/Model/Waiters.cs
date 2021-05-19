@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using restaurant.Model;
 using static restaurant.utils.Utils;
+using restaurant.Controller;
+using Action = restaurant.Controller.Action;
+using System.Linq;
 
 namespace restaurant.Model
 {
-    class Waiters: Man
+    public class Waiters: Man
     {
         public Order order { get; set; }
 
@@ -18,7 +21,10 @@ namespace restaurant.Model
         public override Order GetOrder(int Peoples, int Staff)
         {
             int GuestId = GetRandom(Staff + 1, Peoples + 1);
-            return order;
+            Action action = Action.GetInstance();
+            order = action.Orders.Find(x => x.GuestId == GuestId);
+            return action.Orders.Find(x => x.GuestId == GuestId);
+
         }
     }
 }

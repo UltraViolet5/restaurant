@@ -6,7 +6,7 @@ using restaurant.utils;
 
 namespace restaurant.Model
 {
-    class Order
+    public class Order
     {
         public Food food { get; set; }
         public int GuestId { get; set; }

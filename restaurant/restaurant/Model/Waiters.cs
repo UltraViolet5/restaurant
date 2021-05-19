@@ -12,6 +12,7 @@ namespace restaurant.Model
     public class Waiters: Man
     {
         public Order order { get; set; }
+        public List<Order> FinishedOrder { get; set; }
 
         public Waiters(string name) : base(name)
         {

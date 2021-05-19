@@ -18,14 +18,19 @@ namespace restaurant.Model
 
         }
 
-        public override Order GetOrder(int Peoples, int Staff)
+        public override Order GetOrder()
         {
             
             Action action = Action.GetInstance();
              
             foreach (var waiter in action.ListWaiters)
             {
-                action.chef.ChefOrder.Add(waiter.order);
+                ChefOrder.Add(waiter.order);
+                if (ChefOrder.Count == 2)
+                {
+                    waiter.FinishedOrder.Add(ChefOrder[0]);
+                    ChefOrder.Remove(ChefOrder[0]);
+                }
             }
 
 
